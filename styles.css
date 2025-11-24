@@ -1,0 +1,358 @@
+/* Importação das fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+/* Definição de Variáveis de Cores */
+:root {
+    --cor-primaria: #FF5555; /* Salmão */
+    --cor-secundaria: #A3D78A; /* Verde Escuro */
+    --cor-terciaria: #FF937E; /* Salmão Claro */
+    --cor-quaternaria: #C1E59F; /* Verde Claro */
+    --cor-texto: #333333; /* Cinza escuro para texto principal */
+    --cor-fundo: #f4f4f4; /* Fundo claro da página */
+    --cor-fundo-header: var(--cor-secundaria);
+}
+
+/* --- Estilos Gerais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* --- Header Principal --- */
+.header-principal {
+    background-color: var(--cor-fundo-header);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-principal h1 {
+    font-family: 'Playfair Display', serif; /* Fonte do h1 solicitada */
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-bottom: 0.2em;
+    color: white; /* Garante boa legibilidade contra o fundo verde */
+}
+
+.subtitulo {
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+/* --- Seções e Títulos --- */
+.secao {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.secao h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--cor-primaria);
+    border-bottom: 3px solid var(--cor-quaternaria);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.secao h3 {
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* --- Cards e Grids --- */
+.exemplo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.card p {
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* Estilização dos Cards da Seção de Cores */
+.cor-nome { background-color: white; border: 2px solid var(--cor-primaria); }
+.cor-hex { background-color: var(--cor-terciaria); color: black; }
+.cor-rgb { background-color: var(--cor-secundaria); color: white; }
+.cor-rgba { background-color: var(--cor-primaria); color: white; }
+.cor-hsl { background-color: var(--cor-quaternaria); color: black; }
+
+/* Paleta de Cores */
+.paleta-cores h3 {
+    text-align: center;
+}
+
+.paleta-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.cor-item {
+    flex-grow: 1;
+    height: 80px;
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.cor-primaria { background-color: var(--cor-primaria); color: white; }
+.cor-secundaria { background-color: var(--cor-secundaria); color: white; }
+.cor-terciaria { background-color: var(--cor-terciaria); color: black; }
+.cor-acento { background-color: var(--cor-quaternaria); color: black; }
+.cor-neutra { background-color: #333; color: white; }
+
+/* --- Tipografia --- */
+.exemplo-tipografia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.tipo-exemplo {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.tipo-exemplo h3 {
+    color: var(--cor-primaria);
+    margin-top: 0;
+}
+
+.tipo-roboto p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.tipo-playfair p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2em;
+    color: var(--cor-secundaria);
+}
+
+.peso-light { font-weight: 300; }
+.peso-normal { font-weight: 400; }
+.peso-bold { font-weight: 700; }
+
+.tamanho-14 { font-size: 14px; }
+.tamanho-16 { font-size: 16px; }
+.tamanho-18 { font-size: 18px; }
+.tamanho-24 { font-size: 24px; }
+
+.linha-compacta { line-height: 1.2; background-color: #f9f9f9; padding: 5px; }
+.linha-normal { line-height: 1.5; background-color: #f0f0f0; padding: 5px; }
+.linha-ampla { line-height: 2.0; background-color: #e8e8e8; padding: 5px; }
+
+/* --- Backgrounds --- */
+.bg-cor { background-color: var(--cor-primaria); color: white; }
+
+/* Para os exemplos de Background Image e Position, usaremos uma imagem de URL fictícia */
+.bg-imagem, .bg-cover, .bg-contain, .pos-item {
+    background-image: url('https://picsum.photos/300/200'); /* Imagem de exemplo */
+    background-color: var(--cor-terciaria);
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-cover { background-size: cover; }
+.bg-contain { background-size: contain; }
+.bg-imagem { background-size: 50px 50px; background-repeat: repeat; } /* Padrão repetitivo */
+
+.exemplo-posicao {
+    margin-top: 30px;
+}
+.posicao-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.pos-item {
+    height: 100px;
+    background-size: 50% 50%;
+    border: 2px solid var(--cor-secundaria);
+}
+
+.bg-pos-center { background-position: center; }
+.bg-pos-top { background-position: top; }
+.bg-pos-bottom { background-position: bottom; }
+.bg-pos-left { background-position: left; }
+.bg-pos-right { background-position: right; }
+
+/* --- Gradientes --- */
+.gradientes-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gradiente-item {
+    height: 150px;
+    border-radius: 6px;
+    padding: 10px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+.gradiente-item h3 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.gradiente-item code {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    word-break: break-all;
+}
+
+/* Aplicando cores da paleta aos exemplos de gradientes */
+.grad-linear-2 {
+    background-image: linear-gradient(to right, var(--cor-primaria), var(--cor-secundaria));
+}
+
+.grad-linear-3 {
+    background-image: linear-gradient(to right, var(--cor-terciaria), var(--cor-primaria), var(--cor-secundaria));
+}
+
+.grad-linear-diagonal {
+    background-image: linear-gradient(45deg, var(--cor-quaternaria), var(--cor-secundaria));
+}
+
+.grad-radial {
+    background-image: radial-gradient(circle, var(--cor-terciaria), var(--cor-primaria));
+}
+
+.grad-complexo {
+    background-image: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-quaternaria) 50%, var(--cor-secundaria) 100%);
+}
+
+.grad-radial-complexo {
+    background-image: radial-gradient(circle at top left, var(--cor-terciaria), var(--cor-secundaria), var(--cor-primaria));
+}
+
+/* --- Exercício Prático --- */
+.exercicio-container {
+    padding: 20px;
+    border: 2px dashed var(--cor-primaria);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card-exercicio {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-texto);
+    padding: 30px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--cor-primaria);
+}
+
+.card-exercicio h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--cor-secundaria);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.btn-exercicio {
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.btn-exercicio:hover {
+    background-color: #D64A4A; 
+}
+
+.dicas {
+    margin-top: 30px;
+    text-align: left;
+    background-color: var(--cor-fundo);
+    padding: 15px;
+    border-left: 5px solid var(--cor-secundaria);
+    border-radius: 4px;
+}
+
+.dicas h4 {
+    color: var(--cor-secundaria);
+    margin-bottom: 5px;
+}
+
+/* --- Footer --- */
+.footer-principal {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+.footer-principal p {
+    margin: 5px 0;
+}
